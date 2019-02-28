@@ -5,7 +5,7 @@ import './Dashboard.css'
 
 import DashboardHeader from './components/DashboardHeader/DashboardHeader'
 import DashboardHome from './components/DashboardHome/DashboardHome';
-import DashboardBottom from './components/DashboardBottom/DashboardBottom';
+import PageBottom from '../../components/PageBottom/PageBottom';
 
 class Dashboard extends Component {
     render() {
@@ -16,7 +16,7 @@ class Dashboard extends Component {
                     <div className='container'>
                         <Route exact path='/' component={DashboardHome}></Route>
                     </div>
-                    <DashboardBottom/>
+                    <PageBottom color={'#000E22'}/>
                 </div>
             </Router>
         )

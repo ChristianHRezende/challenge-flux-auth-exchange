@@ -1,0 +1,51 @@
+.signin-form {
+    width: 40%;
+    height:50%;
+    background-color: #EEEEEE;
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #707070;
+    border-radius: 4px;
+}
+.signinauth-form-button-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-confirm {
+    width:40%;
+    background-color: #000E22;
+    border-color: #F7931A;
+}
+
+
+
+.icon-form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img {
+    width: 100px;
+    height:100px;
+}
+
+@media (max-width: 600px) 
+{
+
+    .signin-form {
+        width: 90%;
+        height:50%;
+        background-color: #EEEEEE;
+        margin-top: 30px;
+        padding: 30px;
+        border: 1px solid #707070;
+        border-radius: 4px;
+    }
+
+    .btn-confirm {
+        width:100%;
+        background-color: #000E22;
+        border-color: #F7931A;
+    }
+}

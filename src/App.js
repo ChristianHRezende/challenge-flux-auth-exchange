@@ -8,16 +8,14 @@ import {
 
 import './App.css'
 
-import Dashboard from './scenes/Dashboard/Dashboard'
+import SignIn from './scenes/Access/SignIn/SignIn';
 
 class App extends Component {
   render() {
     return (
-
       <div className='app'>
-        <Dashboard />
+        <SignIn />
       </div>
-
     );
   }
 }

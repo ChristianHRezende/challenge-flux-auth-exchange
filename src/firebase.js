@@ -1,15 +1,17 @@
 import firebase from 'firebase/app'
- import 'firebase/database' 
+import 'firebase/database'
+import 'firebase/auth'
 
- // Initialize Firebase
- const config = {
-    apiKey: "AIzaSyAFtfQkCz6p5fk8bBMbxqg2kI1tiPkjp-A",
-    authDomain: "desafio3xbit.firebaseapp.com",
-    databaseURL: "https://desafio3xbit.firebaseio.com",
-    projectId: "desafio3xbit",
-    storageBucket: "",
-    messagingSenderId: "246075104931"
-  };
+// Initialize Firebase
+const config = {
+  apiKey: "AIzaSyAFtfQkCz6p5fk8bBMbxqg2kI1tiPkjp-A",
+  authDomain: "desafio3xbit.firebaseapp.com",
+  databaseURL: "https://desafio3xbit.firebaseio.com",
+  projectId: "desafio3xbit",
+  storageBucket: "",
+  messagingSenderId: "246075104931"
+};
 firebase.initializeApp(config);
 
 export const database = firebase.database()
+export const auth = firebase.auth()
