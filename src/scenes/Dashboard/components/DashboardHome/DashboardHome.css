@@ -1,0 +1,42 @@
+.dashboard-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.options-container {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.options-buttons-container {
+    display: flex;
+    justify-content: space-evenly;  
+}
+
+.option-button-buy {
+    height: 50px;
+    width: 180px;
+    background-color: #F6921A;
+    border-color: #F6921A;
+    color:white;
+}
+
+.option-button-sell {
+    height: 50px;
+    width: 180px;
+    background-color: #000E22;
+    border-color: #000E22;
+    color:white;
+}
+
+.info-coins-container {
+    margin:30px
+}
+
+.chart-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
