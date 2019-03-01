@@ -25,20 +25,20 @@ class DashboardHome extends Component {
                         <table className='table'>
                             <tbody>
                                 <tr>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinIcon} />00000000,00</div></td>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinCashIcon} />00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinIcon} alt='coin'/>00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinCashIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>
                                 <tr>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={eosIcon} />00000000,00</div></td>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={etheriumIcon} />00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={eosIcon} alt='coin'/>00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={etheriumIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>
                                 <tr>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={litecoinIcon} />00000000,00</div></td>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={tetherIcon} />00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={litecoinIcon} alt='coin'/>00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={tetherIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>
                                 <tr>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={xrpIcon} />00000000,00</div></td>
-                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinCashIcon} />00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={xrpIcon} alt='coin'/>00000000,00</div></td>
+                                    <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinCashIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>
 
                             </tbody>

@@ -7731,6 +7731,12 @@ react-test-renderer@^16.0.0-0:
     react-is "^16.8.3"
     scheduler "^0.13.3"
 
+react-toasts@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-toasts/-/react-toasts-3.0.0.tgz#c0159632a1fd4eed177eccb169e2fb6678a9bcac"
+  dependencies:
+    watchable-stores "^2.0.2"
+
 react-transition-group@^2.5.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.6.0.tgz#3c41cbdd9c044c5f8604d4e8d319e860919c9fae"
@@ -9280,6 +9286,10 @@ watch@~0.18.0:
   dependencies:
     exec-sh "^0.2.0"
     minimist "^1.2.0"
+
+watchable-stores@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/watchable-stores/-/watchable-stores-2.0.2.tgz#38c03b73019e704d5f4741541b0dfbe9169c86bb"
 
 watchpack@^1.5.0:
   version "1.6.0"

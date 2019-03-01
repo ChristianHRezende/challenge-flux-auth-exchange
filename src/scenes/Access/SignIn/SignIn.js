@@ -9,6 +9,8 @@ import SignInForm from './SignInForm/SignInForm';
 import SignInGoogleAuth from './SignInGoogleAuth/SignInGoogleAuth';
 import Spinner from '../../../components/Spinner/Spinner';
 
+import { ToastsContainer, ToastsStore } from 'react-toasts'
+
 class SignIn extends Component {
 
     constructor(props) {
@@ -26,11 +28,10 @@ class SignIn extends Component {
             console.log(result)
             this.setState({ isAuth: true, isLoading: false, user: form.email })
         }).catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(errorCode, errorMessage)
+            /*var errorCode = error.code;
+              var errorMessage = error.message; */
             this.setState({ isLoading: false })
-
+            ToastsStore.error('Verifique seus dados, e-mail ou senha incorreta')
         });
     }
 
@@ -43,7 +44,8 @@ class SignIn extends Component {
                             : <SignInGoogleAuth user={this.state.user} />
                     }
                 </div>
-                <PageBottom color={'#EEEEEE'} />
+                <ToastsContainer store={ToastsStore} />
+                <PageBottom color={'#EEEEEE'} redirectIcon={'/dashboard'} />
             </div>
         )
     }

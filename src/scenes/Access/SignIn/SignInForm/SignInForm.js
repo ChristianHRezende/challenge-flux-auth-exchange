@@ -34,7 +34,6 @@ class SignInForm extends Component {
 
     render() {
         return (
-
             <div className='signin-form'>
                 <div className='icon-form'><img className='logo' src={logo} alt='logo'></img></div>
                 <form>

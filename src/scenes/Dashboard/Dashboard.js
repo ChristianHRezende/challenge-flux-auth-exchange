@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
 import './Dashboard.css'
 
@@ -8,15 +8,30 @@ import DashboardHome from './components/DashboardHome/DashboardHome';
 import PageBottom from '../../components/PageBottom/PageBottom';
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { isAuth: true, user: {}, redirect: false }
+    }
+    componentDidMount() {
+        const user = localStorage.getItem('user')
+        if (user) { this.setState({ user }) }
+        else { this.setState({ isAuth: !this.state.isAuth }) }
+    }
+
+    clickSignOutHandler = () => {
+        this.setState({redirect:true})
+    }
+
     render() {
+        if (this.state.redirect) return <Redirect to='/' />
         return (
             <Router>
                 <div>
-                    <DashboardHeader />
+                    <DashboardHeader username={this.state.user} clickSignOut={this.clickSignOutHandler} />
                     <div className='container'>
-                        <Route exact path='/' component={DashboardHome}></Route>
+                        <Route exact path='/dashboard/' component={DashboardHome}></Route>
                     </div>
-                    <PageBottom color={'#000E22'}/>
+                    <PageBottom color={'#000E22'} />
                 </div>
             </Router>
         )

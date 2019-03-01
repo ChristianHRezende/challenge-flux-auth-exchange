@@ -4,6 +4,8 @@ import './SignInGoogleAuth.css'
 
 import Speakeasy from 'speakeasy'
 import QRCode from 'qrcode'
+import { ToastsContainer, ToastsStore } from 'react-toasts'
+import { Redirect } from 'react-router-dom'
 
 class SignInGoogleAuth extends Component {
 
@@ -11,23 +13,25 @@ class SignInGoogleAuth extends Component {
         super(props)
         this.state = {
             url: '',
-            userToken: ''
+            userToken: '',
+            redirect: false,
+            user: '',
+            secret: ''
         }
     }
 
     componentDidMount() {
         const localSecretUser = localStorage.getItem('user')
-        console.log(localSecretUser)
-        console.log(this.props.user)
         if (!localSecretUser || localSecretUser !== this.props.user) {
             const secret = Speakeasy.generateSecret()
-            localStorage.setItem('user', this.props.user)
-            localStorage.setItem('secret', secret.hex)
 
             QRCode.toDataURL(secret.otpauth_url, (err, dataUrl) => {
                 err && console.log(err)
-                this.setState({ url: dataUrl })
+                this.setState({ url: dataUrl, user: this.props.user, secret: secret.hex })
             })
+        } else {
+            const secret = localStorage.getItem('secret')
+            this.setState({ secret: secret, user: localSecretUser })
         }
     }
 
@@ -36,22 +40,30 @@ class SignInGoogleAuth extends Component {
     }
 
     clickConfirmHandler = () => {
-        const data = localStorage.getItem('secret')
+        const data = this.state.secret
         const verified = Speakeasy.totp.verify({
             secret: data,
             encoding: 'hex',
             token: this.state.userToken
         });
-        console.log(verified)
+        if (verified) {
+            localStorage.setItem('user', this.props.user)
+            localStorage.setItem('secret', data)
+            this.setState({ redirect: true })
+        } else {
+            ToastsStore.error("Código incorreto")
+        }
     }
 
     render() {
+        if (this.state.redirect) return <Redirect to="/dashboard" />
+
         return (
             <div className='signin-form'>
                 {this.state.url &&
                     <div>
                         <div><h5>Utilize o aplicativo mobile Google Authenticator para fazer a leitura do qrcode.</h5></div>
-                        <div className='icon-form'><img className='logo' src={this.state.url} alt='QRCODE'></img></div>
+                        <div className='icon-form'><img className='img' src={this.state.url} alt='QRCODE'></img></div>
                     </div>
                 }
                 <form>
@@ -63,6 +75,7 @@ class SignInGoogleAuth extends Component {
                         <button className='btn btn-secondary btn-confirm' type='button' onClick={this.clickConfirmHandler}>Confirmar</button>
                     </div>
                 </form>
+                <ToastsContainer store={ToastsStore} />
             </div>
         )
     }
