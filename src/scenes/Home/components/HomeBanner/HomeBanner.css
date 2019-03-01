@@ -1,0 +1,57 @@
+.img {
+    width: 100%;
+    height: 100%;
+}
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 60vh
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+
+.form-home {
+}
+
+.text-white {
+    color:#FFF
+}
+
+.text-orange {
+    text-align: right;
+    color:#F6921A
+}
+
+.form-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.label-form {
+    text-align: left;
+}
+
+.input-open {
+    border-color:  #F6921A;
+    width: 300px;
+}
+.btn-open {
+    background-color: #F6921A;
+    border-color: #FFF;
+    width: 240px;
+    height: 60px;
+    margin-top: 30px;
+}

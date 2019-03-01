@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+
 import './Home.css'
+import HomeHeader from './components/HomeHeader/HomeHeader';
+import HomeBanner from './components/HomeBanner/HomeBanner';
+import PageBottom from '../../components/PageBottom/PageBottom';
 class Home extends Component {
     render() {
         return (
-            <div className='home'>
-                <Link to='/signin'><button type='button' className='btn btn-primary'>Entrar</button></Link>
-                <Link to='/signup'><button type='button' className='btn btn-success'>Cadastrar-se</button></Link>
+            <div>
+                <HomeHeader/>
+                <HomeBanner/>
+                <PageBottom/>
             </div>
         )
     }
