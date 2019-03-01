@@ -9,7 +9,7 @@ import './App.css'
 
 import SignIn from './scenes/Access/SignIn/SignIn';
 import Home from './scenes/Home/Home';
-import SignUp from './scenes/Access/Signup/Signup';
+import SignUp from './scenes/Access/Signup/SignUp';
 import Dashboard from './scenes/Dashboard/Dashboard';
 
 class App extends Component {

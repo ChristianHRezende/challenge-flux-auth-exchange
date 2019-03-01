@@ -1,0 +1,15 @@
+.signup-email {
+    width: 600px;
+    height:450px;
+    background-color: #FFFFFF;
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid #707070;
+    border-radius: 4px;
+}
+.signup-email-content {
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   align-items:center;
+}

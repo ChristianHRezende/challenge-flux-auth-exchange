@@ -6,6 +6,8 @@ import './Dashboard.css'
 import DashboardHeader from './components/DashboardHeader/DashboardHeader'
 import DashboardHome from './components/DashboardHome/DashboardHome';
 import PageBottom from '../../components/PageBottom/PageBottom';
+import { auth } from 'firebase';
+import { ToastsStore } from 'react-toasts';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -19,7 +21,12 @@ class Dashboard extends Component {
     }
 
     clickSignOutHandler = () => {
-        this.setState({redirect:true})
+        auth.signOut().then(function () {
+            this.setState({ redirect: true })
+        }).catch(function (error) {
+            ToastsStore.error('Não foi possível realizar o logout')
+        });
+
     }
 
     render() {
