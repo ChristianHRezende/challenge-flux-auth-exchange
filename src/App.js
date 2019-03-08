@@ -13,13 +13,27 @@ import SignUp from './scenes/Access/Signup/SignUp';
 import Dashboard from './scenes/Dashboard/Dashboard';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      form: {
+        email: ''
+      }
+    }
+  }
+
+  onClickSignupHandler = (inputText) => {
+    this.setState({ form: { ...this.state.form, email: inputText } })
+  }
+
   render() {
     return (
       <Router>
         <div className='app'>
-          <Route path="/" exact={true} component={Home} />
+          <Route path="/" exact={true} render={() => <Home onClickConfirmEmail={this.onClickSignupHandler} email={this.state.form.email} />} />
           <Route path="/signin" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
+          <Route path="/signup" render={() => <SignUp email={this.state.form.email} />} />
           <Route path="/dashboard" component={Dashboard} />
         </div>
       </Router>

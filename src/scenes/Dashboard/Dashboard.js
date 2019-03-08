@@ -17,7 +17,7 @@ class Dashboard extends Component {
     componentDidMount() {
         const user = localStorage.getItem('user')
         if (user) { this.setState({ user }) }
-        else { this.setState({ isAuth: !this.state.isAuth }) }
+        else { this.setState({ isAuth: !this.state.isAuth, redirect: true }) }
     }
 
     clickSignOutHandler = () => {
@@ -26,7 +26,6 @@ class Dashboard extends Component {
         }).catch(function (error) {
             ToastsStore.error('Não foi possível realizar o logout')
         });
-
     }
 
     render() {

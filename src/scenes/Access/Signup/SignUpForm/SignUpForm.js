@@ -19,6 +19,12 @@ class SignUpForm
         }
     }
 
+    componentDidMount = () => {
+        if (this.props.email && this.props.email.includes('@')) {
+            this.setState({ form: { ...this.state.form, email: this.props.email } })
+        }
+    }
+
     changeInputHandler = (event) => {
         const { target } = event
         if (target.id === 'email') {

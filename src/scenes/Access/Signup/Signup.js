@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import './SignUp.css'
+import { Link } from 'react-router-dom'
 
 import PageBottom from '../../../components/PageBottom/PageBottom';
 
@@ -19,18 +20,19 @@ class SignUp extends Component {
         this.state = {
             isSuccess: false,
             isLoading: false,
-            user: ''
+            user: '',
+            backRedirect: false
         }
     }
 
     clickConfirmHandler = (form) => {
         this.setState({ isLoading: true })
         auth.createUserWithEmailAndPassword(form.email, form.password).then((result) => {
-            console.log(result)       
+            console.log(result)
             const user = auth.currentUser
-            user.sendEmailVerification().then(()=> {
+            user.sendEmailVerification().then(() => {
                 this.setState({ isSuccess: true, isLoading: false, user: form.email })
-            }).catch((error) =>{
+            }).catch((error) => {
                 ToastsStore.error('Não foi possível enviar o e-mail de confirmação')
             });
         }).catch((error) => {
@@ -44,9 +46,10 @@ class SignUp extends Component {
     render() {
         return (
             <div>
+                <div><Link to='/'>{'<<Home'}</Link></div>
                 <div className='signin'>
                     {this.state.isLoading ? <Spinner />
-                        : !this.state.isSuccess ? <SignUpForm onClickConfirm={this.clickConfirmHandler} />
+                        : !this.state.isSuccess ? <SignUpForm email={this.props.email} onClickConfirm={this.clickConfirmHandler} />
                             : <SignUpEmailSend email={this.state.user} />
                     }
                 </div>
