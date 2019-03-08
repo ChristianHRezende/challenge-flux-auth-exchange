@@ -1,0 +1,20 @@
+.home-info {
+    display: flex;
+    flex:3;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie {
+    width:800px ;
+    height: 60%;
+}
+
+@media (max-width:600px){
+    .movie {
+        width:400px ;
+        height: 40%;
+        margin-top: 200px;
+    }
+    
+}
