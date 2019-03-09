@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import './SignUpForm.css'
 
 import logo from '../../../../images/logo.png'
+import authenticatorImg from '../../../../images/google-authenticator.png'
+import httpsImg from '../../../../images/ssl.png'
 import { ToastsStore } from 'react-toasts';
 
 class SignUpForm
@@ -78,27 +80,37 @@ class SignUpForm
 
     render() {
         return (
-            <div className='signup-form'>
-                <div className='icon-form'><img className='logo' src={logo} alt='logo'></img></div>
-                <form>
-                    <div className='form-group signup-form-group'>
-                        <label>E-mail:</label>
-                        <input id='email' className='form-control' type='email' value={this.state.form.email} onChange={this.changeInputHandler} />
-                    </div>
-                    <div className='form-group'>
-                        <label>Senha:</label>
-                        <input id='password' className='form-control' type='password' value={this.state.form.password} onChange={this.changeInputHandler} />
-                    </div>
-                    <div className='form-group'>
-                        <label>Confirme a senha:</label>
-                        <input id='passwordConfirm' className='form-control' type='password' value={this.state.form.passwordConfirm} onChange={this.changeInputHandler} />
-                    </div>
+            <div className='container'>
+                <div className='signup-form'>
+                    <div className='icon-form'><img className='logo' src={logo} alt='logo'></img></div>
+                    <form>
+                        <div className='form-group signup-form-group'>
+                            <label>E-mail:</label>
+                            <input id='email' className='form-control' type='email' value={this.state.form.email} onChange={this.changeInputHandler} />
+                        </div>
+                        <div className='form-group'>
+                            <label>Senha:</label>
+                            <input id='password' className='form-control' type='password' value={this.state.form.password} onChange={this.changeInputHandler} />
+                        </div>
+                        <div className='form-group'>
+                            <label>Confirme a senha:</label>
+                            <input id='passwordConfirm' className='form-control' type='password' value={this.state.form.passwordConfirm} onChange={this.changeInputHandler} />
+                        </div>
 
-                    <div className='signup-form-button-group'>
-                        <button className='btn btn-secondary btn-confirm' type='button' onClick={this.clickButtonConfirmHandler}>Confirmar</button>
+                        <div className='signup-form-button-group'>
+                            <button className='btn btn-secondary btn-confirm' type='button' onClick={this.clickButtonConfirmHandler}>Confirmar</button>
+                        </div>
+                    </form>
+                </div>
+                <div className='signup-imgs'>
+                    <h4 className='sec-container-title'>SUA SEGURANÇA EM PRIMEIRO LUGAR</h4>
+                    <div className='sec-container-imgs'>
+                        <img className='sec-container-img' src={authenticatorImg} alt='authenticator' />
+                        <img className='sec-container-img' src={httpsImg} alt='authenticator' />
                     </div>
-                </form>
+                </div>
             </div>
+
         )
     }
 }

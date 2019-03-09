@@ -10,7 +10,7 @@
     height: 60%;
 }
 
-@media (max-width:600px){
+@media (max-width:1000px){
     .movie {
         width:400px ;
         height: 40%;

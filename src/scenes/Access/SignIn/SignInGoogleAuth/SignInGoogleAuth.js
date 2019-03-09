@@ -63,7 +63,7 @@ class SignInGoogleAuth extends Component {
                 {this.state.url &&
                     <div>
                         <div><h5>Utilize o aplicativo mobile Google Authenticator para fazer a leitura do qrcode.</h5></div>
-                        <div className='icon-form'><img className='img' src={this.state.url} alt='QRCODE'></img></div>
+                        <div className='icon-form'><img src={this.state.url} alt='QRCODE'></img></div>
                     </div>
                 }
                 <form>
