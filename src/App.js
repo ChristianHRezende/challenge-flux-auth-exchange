@@ -7,10 +7,10 @@ import {
 
 import './App.css'
 
-import Home from './scenes/Home/Home';
-import SignIn from './scenes/Access/SignIn/SignIn';
-import SignUp from './scenes/Access/Signup/SignUp'
-import Dashboard from './scenes/Dashboard/Dashboard';
+import Home from './scenes/Home/Home'
+import SignIn from './scenes/Access/SignIn/SignIn'
+import SignUp from './scenes/Access/SignUp/SignUp'
+import Dashboard from './scenes/Dashboard/Dashboard'
 
 class App extends Component {
 
