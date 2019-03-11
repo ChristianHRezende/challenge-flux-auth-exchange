@@ -8,3 +8,9 @@
 .home-info {
     height: 100vh;
 }
+.container-spinner{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
