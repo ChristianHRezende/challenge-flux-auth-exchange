@@ -24,19 +24,19 @@ class DashboardHome extends Component {
                         <h6>Seu saldo:</h6>
                         <table className='table'>
                             <tbody>
-                                <tr>
+                                <tr className='info-coins-rt'>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinIcon} alt='coin'/>00000000,00</div></td>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinCashIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>
-                                <tr>
+                                <tr className='info-coins-rt'>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={eosIcon} alt='coin'/>00000000,00</div></td>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={etheriumIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>
-                                <tr>
+                                <tr className='info-coins-rt'>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={litecoinIcon} alt='coin'/>00000000,00</div></td>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={tetherIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>
-                                <tr>
+                                <tr className='info-coins-rt'>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={xrpIcon} alt='coin'/>00000000,00</div></td>
                                     <td><div className='d-flex flex-row justify-content-around align-items-center'> <img className='mr-2' src={bitcoinCashIcon} alt='coin'/>00000000,00</div></td>
                                 </tr>

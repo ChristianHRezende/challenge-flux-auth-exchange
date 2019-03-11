@@ -27,7 +27,7 @@ class HomeBanner extends Component {
         return (
             <div id='banner'>
                 <div className='banner'>
-                    <img className='img' src={background} alt='background'></img>
+                    <img className='img-background' src={background} alt='background'></img>
                     <div className='banner-content'>
                         <div>
                             <h1 className='text-white'>SEJA UM INVESTIDOR DE</h1>

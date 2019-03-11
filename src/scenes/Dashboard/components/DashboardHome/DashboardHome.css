@@ -1,7 +1,8 @@
 .dashboard-home {
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
+    width: 85vw;
 }
 
 .options-container {
@@ -13,9 +14,11 @@
 .options-buttons-container {
     display: flex;
     justify-content: space-evenly;  
+    flex-wrap: wrap;
 }
 
 .option-button-buy {
+    margin-bottom: 5px;
     height: 50px;
     width: 180px;
     background-color: #F6921A;
@@ -24,6 +27,7 @@
 }
 
 .option-button-sell {
+    margin-bottom: 5px;
     height: 50px;
     width: 180px;
     background-color: #000E22;
@@ -35,8 +39,20 @@
     margin:30px
 }
 
+
 .chart-container {
     margin-top: 30px;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width:600px){
+   
+    .info-coins-container {
+        margin:2px
+    }
+    .info-coins-rt{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
